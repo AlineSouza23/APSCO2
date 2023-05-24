@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
+
+*{ /*  estilização inicial padrão, boas práticas*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Poppins", sans-serif; /* Duas fontes das letras, caso a primeira não pegue, css utiliza a segunda */
+}
+
+a{ /* para não aparecer a linha debaixo da linkagem */
+	text-decoration: none;
+}
+
+li{ /* para não aparecer a bolinha da lista não ordenada */
+	list-style: none;
+}
+
+
+
+h6{ /* estilização da tag H6 que tem texto do instagram */
+	font-size: 20px;
+	line-height: 32px;
+	color: #6c6c6c;
+	margin-top: 16px;
+	font-weight: normal;
+}
+h2{ /* estilização da tag H6 que tem texto do instagram */
+	font-size: 30px;
+	line-height: 32px;
+	color: #5e5d5d;
+	font-weight: bold;
+
+}
+.nav{ /* editando classe navbar */
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1rem 6.5rem;
+	background: transparent;
+	transition: all 0.5s ease;
+	z-index: 100000;
+
+}
+
+.nav .navbar-toggler{/* editando classe navbar com classe dos span*/
+	display: none;
+	border: none;
+	outline: none;
+}
+
+.nav .navbar-toggler .toggler-icon{/* editando classe navbar com classe do "hamburguer"*/
+	width: 27px;
+	height: 3px;
+	background-color: #121212;
+	margin: 5px 0;
+	position: relative;
+	display: block;
+	transition: all 0.3s ease-out 0s;
+
+} /* para deixar a logo e texto alinhados  */
+.nav .navbar-social span{
+	font-size: 18px;
+	font-weight: 600;
+	padding-right: 10px;
+	color: #6c6c6c;
+
+} /* para deixar a logo e texto alinhados  */
+.nav .navbar-social{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.fundo{ /* imagem de fundo que desaparece com scroll */
+	background-image: url(img/carroFundo.png);
+	width: 100%;
+	height: 120vh;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+.fundo .overlay{ /* parte branca da imagem de fundo */
+	background-image: linear-gradient(rgba(232, 237, 255, 0.9), rgba(239, 254, 255, 0.2));
+	width: 100%;
+	height: 100%;
+}
+.fundo .imagemOnda{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.fundo .imagemOnda img{
+	width: 100%;
+	display: block;
+}
+.texto {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+.textoSumir:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-left: 10px #4898f7;
+}
